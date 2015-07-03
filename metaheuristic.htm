@@ -5,13 +5,22 @@ xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
 xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta http-equiv=Content-Type content="text/html; charset=unicode">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 15">
 <meta name=Originator content="Microsoft Word 15">
-<link rel=File-List href="index.files/filelist.xml">
-<link rel=themeData href="index.files/themedata.thmx">
-<link rel=colorSchemeMapping href="index.files/colorschememapping.xml">
+<link rel=File-List href="metaheuristic.files/filelist.xml">
+<link rel=Edit-Time-Data href="metaheuristic.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<link rel=themeData href="metaheuristic.files/themedata.thmx">
+<link rel=colorSchemeMapping href="metaheuristic.files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:TrackMoves>false</w:TrackMoves>
@@ -50,12 +59,9 @@ xmlns="http://www.w3.org/TR/REC-html40">
   <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
   <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
   <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
   <w:LsdException Locked="false" Priority="9" SemiHidden="true"
    UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
   <w:LsdException Locked="false" Priority="9" SemiHidden="true"
@@ -112,8 +118,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
    Name="footer"/>
   <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
    Name="index heading"/>
-  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
   <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
    Name="table of figures"/>
   <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
@@ -616,12 +621,13 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;
-	mso-font-charset:2;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
 @font-face
 	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;
@@ -633,11 +639,10 @@ xmlns="http://www.w3.org/TR/REC-html40">
 @font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:1;
+	mso-font-charset:0;
 	mso-generic-font-family:roman;
-	mso-font-format:other;
 	mso-font-pitch:variable;
-	mso-font-signature:0 0 0 0 0 0;}
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
 @font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
@@ -652,6 +657,13 @@ xmlns="http://www.w3.org/TR/REC-html40">
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
 	mso-font-signature:-2147483001 672087122 22 0 262175 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
 @font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;
@@ -678,146 +690,286 @@ xmlns="http://www.w3.org/TR/REC-html40">
 	{mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:"";
-	margin:0cm;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	text-justify:inter-ideograph;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.25pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	line-height:125%;
 	mso-pagination:widow-orphan;
-	font-size:16.0pt;
-	font-family:Consolas;
-	mso-fareast-font-family:微软雅黑;}
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
 h1
 	{mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"标题 1 Char";
-	margin-top:12.0pt;
+	margin-top:24.0pt;
 	margin-right:0cm;
-	margin-bottom:0cm;
+	margin-bottom:3.9pt;
 	margin-left:0cm;
-	margin-bottom:.0001pt;
-	mso-para-margin-top:12.0pt;
-	mso-para-margin-right:0cm;
-	mso-para-margin-bottom:1.0gd;
-	mso-para-margin-left:0cm;
-	mso-para-margin-bottom:.0001pt;
-	text-align:justify;
-	text-justify:inter-ideograph;
+	text-align:center;
 	mso-pagination:widow-orphan;
 	page-break-after:avoid;
 	mso-outline-level:1;
-	font-size:36.0pt;
-	font-family:Consolas;
-	mso-fareast-font-family:微软雅黑;}
+	font-size:15.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;}
 h2
 	{mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"标题 2 Char";
-	margin-top:36.0pt;
+	margin-top:13.0pt;
 	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:21.0pt;
-	text-align:justify;
-	text-justify:inter-ideograph;
-	text-indent:-21.0pt;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	line-height:171%;
 	mso-pagination:widow-orphan;
 	page-break-after:avoid;
 	mso-outline-level:2;
-	mso-list:l0 level1 lfo2;
-	font-size:24.0pt;
-	font-family:Consolas;
-	mso-fareast-font-family:微软雅黑;}
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;}
 h3
-	{mso-style-noshow:yes;
-	mso-style-priority:9;
+	{mso-style-priority:9;
+	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"标题 3 Char";
-	mso-style-next:正文;
-	margin-top:24.0pt;
+	margin-top:13.0pt;
 	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:21.0pt;
-	text-align:justify;
-	text-justify:inter-ideograph;
-	text-indent:-21.0pt;
-	mso-pagination:widow-orphan lines-together;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	line-height:171%;
+	mso-pagination:widow-orphan;
 	page-break-after:avoid;
 	mso-outline-level:3;
-	mso-list:l1 level1 lfo4;
-	font-size:18.0pt;
-	mso-bidi-font-size:16.0pt;
-	font-family:Consolas;
-	mso-fareast-font-family:微软雅黑;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-noshow:yes;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;}
+h4
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"标题 4 Char";
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:14.5pt;
+	margin-left:0cm;
+	line-height:155%;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	layout-grid-mode:char;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;}
+h5
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"标题 5 Char";
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:14.5pt;
+	margin-left:0cm;
+	line-height:155%;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	layout-grid-mode:char;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:99;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.05pt;
+	margin-left:0cm;
+	text-indent:24.0pt;
+	line-height:125%;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-priority:39;
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-priority:39;
+	margin-top:1.25pt;
+	margin-right:0cm;
+	margin-bottom:1.25pt;
+	margin-left:5.0pt;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-priority:39;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
 	mso-style-link:"页眉 Char";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	text-align:center;
 	mso-pagination:widow-orphan;
-	tab-stops:center 207.65pt right 415.3pt;
-	layout-grid-mode:char;
-	border:none;
-	mso-border-bottom-alt:solid windowtext .75pt;
-	padding:0cm;
-	mso-padding-alt:0cm 0cm 1.0pt 0cm;
 	font-size:9.0pt;
-	font-family:Consolas;
-	mso-fareast-font-family:微软雅黑;}
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;}
 p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-link:"页脚 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.25pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
+p.MsoIndexHeading, li.MsoIndexHeading, div.MsoIndexHeading
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
-	mso-style-link:"页脚 Char";
 	margin:0cm;
 	margin-bottom:.0001pt;
+	text-align:center;
 	mso-pagination:widow-orphan;
-	tab-stops:center 207.65pt right 415.3pt;
+	font-size:16.0pt;
+	font-family:"Cambria",serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;
+	font-weight:bold;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-priority:35;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.25pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:125%;
+	mso-pagination:widow-orphan;
 	layout-grid-mode:char;
-	font-size:9.0pt;
-	font-family:Consolas;
-	mso-fareast-font-family:微软雅黑;}
+	font-size:10.0pt;
+	font-family:"Cambria",serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;}
 a:link, span.MsoHyperlink
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
-	color:#0563C1;
+	color:blue;
 	text-decoration:underline;
 	text-underline:single;}
 a:visited, span.MsoHyperlinkFollowed
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
-	color:#954F72;
+	color:purple;
 	text-decoration:underline;
 	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"纯文本 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"批注框文本 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.25pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.25pt;
+	margin-left:0cm;
+	text-indent:21.0pt;
+	line-height:125%;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
 span.1Char
 	{mso-style-name:"标题 1 Char";
 	mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
 	mso-style-link:"标题 1";
-	mso-ansi-font-size:36.0pt;
-	mso-bidi-font-size:36.0pt;
-	font-family:Consolas;
-	mso-ascii-font-family:Consolas;
+	font-family:"微软雅黑",sans-serif;
+	mso-ascii-font-family:微软雅黑;
 	mso-fareast-font-family:微软雅黑;
-	mso-hansi-font-family:Consolas;
-	mso-bidi-font-family:Consolas;
-	mso-font-kerning:18.0pt;
+	mso-hansi-font-family:微软雅黑;
 	font-weight:bold;}
 span.2Char
 	{mso-style-name:"标题 2 Char";
+	mso-style-noshow:yes;
 	mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
 	mso-style-link:"标题 2";
-	mso-ansi-font-size:24.0pt;
-	mso-bidi-font-size:24.0pt;
-	font-family:Consolas;
-	mso-ascii-font-family:Consolas;
-	mso-fareast-font-family:微软雅黑;
-	mso-hansi-font-family:Consolas;
-	mso-bidi-font-family:Consolas;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-hansi-font-family:Cambria;
 	font-weight:bold;}
 span.3Char
 	{mso-style-name:"标题 3 Char";
@@ -826,42 +978,136 @@ span.3Char
 	mso-style-unhide:no;
 	mso-style-locked:yes;
 	mso-style-link:"标题 3";
-	mso-ansi-font-size:18.0pt;
-	mso-bidi-font-size:16.0pt;
-	font-family:Consolas;
-	mso-ascii-font-family:Consolas;
-	mso-fareast-font-family:微软雅黑;
-	mso-hansi-font-family:Consolas;
-	mso-bidi-font-family:Consolas;
+	font-weight:bold;}
+span.4Char
+	{mso-style-name:"标题 4 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"标题 4";
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-hansi-font-family:Cambria;
+	font-weight:bold;}
+span.5Char
+	{mso-style-name:"标题 5 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"标题 5";
 	font-weight:bold;}
 span.Char
 	{mso-style-name:"页眉 Char";
-	mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
-	mso-style-link:页眉;
-	mso-ansi-font-size:9.0pt;
-	mso-bidi-font-size:9.0pt;
-	font-family:Consolas;
-	mso-ascii-font-family:Consolas;
-	mso-fareast-font-family:宋体;
-	mso-hansi-font-family:Consolas;
-	mso-bidi-font-family:Consolas;}
+	mso-style-link:页眉;}
 span.Char0
 	{mso-style-name:"页脚 Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:页脚;}
+span.Char1
+	{mso-style-name:"纯文本 Char";
 	mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
-	mso-style-link:页脚;
-	mso-ansi-font-size:9.0pt;
-	mso-bidi-font-size:9.0pt;
-	font-family:Consolas;
-	mso-ascii-font-family:Consolas;
+	mso-style-link:纯文本;
+	font-family:宋体;
+	mso-ascii-font-family:宋体;
 	mso-fareast-font-family:宋体;
-	mso-hansi-font-family:Consolas;
-	mso-bidi-font-family:Consolas;}
+	mso-hansi-font-family:宋体;}
+span.Char2
+	{mso-style-name:"批注框文本 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:批注框文本;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.Char3
+	{mso-style-name:"附录标题 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:附录标题;
+	font-family:"微软雅黑",sans-serif;
+	mso-ascii-font-family:微软雅黑;
+	mso-fareast-font-family:微软雅黑;
+	mso-hansi-font-family:微软雅黑;
+	font-weight:bold;}
+p.a, li.a, div.a
+	{mso-style-name:附录标题;
+	mso-style-unhide:no;
+	mso-style-link:"附录标题 Char";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:3.9pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:15.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;
+	font-weight:bold;}
+span.Char4
+	{mso-style-name:"参考文献正文 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:参考文献正文;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.a0, li.a0, div.a0
+	{mso-style-name:参考文献正文;
+	mso-style-unhide:no;
+	mso-style-link:"参考文献正文 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.05pt;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	line-height:125%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:宋体;}
+p.a1, li.a1, div.a1
+	{mso-style-name:源代码;
+	mso-style-unhide:no;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-indent:-21.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	font-family:Consolas;
+	mso-fareast-font-family:宋体;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:宋体;
+	mso-bidi-font-family:宋体;}
+span.MathematicaFormatStandardForm
+	{mso-style-name:MathematicaFormatStandardForm;
+	mso-style-unhide:no;
+	font-family:Courier;
+	mso-ascii-font-family:Courier;
+	mso-hansi-font-family:Courier;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -874,178 +1120,19 @@ span.Char0
 	mso-font-kerning:0pt;}
  /* Page Definitions */
  @page
-	{mso-footnote-separator:url("index.files/header.htm") fs;
-	mso-footnote-continuation-separator:url("index.files/header.htm") fcs;
-	mso-endnote-separator:url("index.files/header.htm") es;
-	mso-endnote-continuation-separator:url("index.files/header.htm") ecs;}
+	{mso-footnote-separator:url("metaheuristic.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("metaheuristic.files/header.htm") fcs;
+	mso-endnote-separator:url("metaheuristic.files/header.htm") es;
+	mso-endnote-continuation-separator:url("metaheuristic.files/header.htm") ecs;}
 @page WordSection1
 	{size:595.3pt 841.9pt;
 	margin:72.0pt 90.0pt 72.0pt 90.0pt;
 	mso-header-margin:42.55pt;
 	mso-footer-margin:49.6pt;
 	mso-paper-source:0;
-	layout-grid:15.6pt;}
+	layout-grid:16.3pt;}
 div.WordSection1
 	{page:WordSection1;}
- /* List Definitions */
- @list l0
-	{mso-list-id:1379040470;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-401278086 -817178740 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l0:level1
-	{mso-level-number-format:bullet;
-	mso-level-style-link:"标题 2";
-	mso-level-text:\F06C;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:21.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06E;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:42.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:\F075;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:63.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06C;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:84.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06E;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:105.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:\F075;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:126.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06C;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:147.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06E;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:168.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l0:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:\F075;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:189.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1
-	{mso-list-id:1734035949;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-379838864 634298930 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l1:level1
-	{mso-level-number-format:bullet;
-	mso-level-style-link:"标题 3";
-	mso-level-text:\F0D8;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:21.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06E;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:42.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:\F075;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:63.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06C;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:84.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06E;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:105.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:\F075;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:126.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06C;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:147.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:\F06E;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:168.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-@list l1:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:\F075;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:189.0pt;
-	text-indent:-21.0pt;
-	font-family:Wingdings;}
-ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
 -->
 </style>
 <!--[if gte mso 10]>
@@ -1065,13 +1152,13 @@ ul
 	font-size:10.0pt;
 	font-family:"Calibri",sans-serif;}
 </style>
-<![endif]-->
-<!--[if gte mso 9]><xml>
+<![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext="edit" spidmax="2049"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
  </o:shapelayout></xml><![endif]-->
+ 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -1084,124 +1171,153 @@ ul
 </script>
 </head>
 
-<body lang=ZH-CN link="#0563C1" vlink="#954F72" style='tab-interval:21.0pt;
-text-justify-trim:punctuation'>
+<body lang=ZH-CN link=blue vlink=purple style='tab-interval:21.0pt;text-justify-trim:
+punctuation'>
 
-<div class=WordSection1 style='layout-grid:15.6pt'>
+<div class=WordSection1 style='layout-grid:16.3pt'>
 
 <div align=center>
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:1.0cm'>
-  <td width=680 style='width:510.25pt;border:none;border-bottom:solid windowtext 1.5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <h1 style='margin-bottom:15.6pt'><span lang=EN-US>Zhouxing Su</span></h1>
-  <p class=MsoNormal><span lang=EN-US>Email: <a href="mailto:suzhouxing@qq.com"><span
-  style='font-size:14.0pt'>suzhouxing@qq.com</span></a> or <a
-  href="mailto:suzhouxing@hust.edu.cn"><span style='font-size:14.0pt'>suzhouxing@hust.edu.cn</span></a></span></p>
-  <p class=MsoNormal><span lang=EN-US><span
-  style='mso-spacerun:yes'>&nbsp;</span></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:1;height:1.0cm'>
-  <td width=680 style='width:510.25pt;border:none;mso-border-top-alt:solid windowtext 1.5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <h2 style='mso-list:l0 level1 lfo2'><![if !supportLists]><span lang=EN-US
-  style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-  Wingdings;font-weight:normal;mso-bidi-font-weight:bold'><span
-  style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
-  lang=EN-US>Git Repositories</span></h2>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:2;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <p class=MsoNormal><span lang=EN-US><a href="https://github.com/Zhouxing-Su">https://github.com/Zhouxing-Su</a></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:3;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <p class=MsoNormal><span lang=EN-US><a href="https://coding.net/u/SuZhouxing">https://coding.net/u/SuZhouxing</a></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:4;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <h2 style='mso-list:l0 level1 lfo2'><![if !supportLists]><span lang=EN-US
-  style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-  Wingdings;font-weight:normal;mso-bidi-font-weight:bold'><span
-  style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
-  lang=EN-US>Social Networks</span></h2>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:5;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <p class=MsoNormal><span lang=EN-US><a
-  href="http://stackoverflow.com/users/1941881/mr-ree">http://stackoverflow.com/users/1941881/mr-ree</a></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:6;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <p class=MsoNormal><span lang=EN-US><a href="http://blog.csdn.net/phoenix_szx">http://blog.csdn.net/phoenix_szx</a>
-  (Chinese)</span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:7;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <h2 style='mso-list:l0 level1 lfo2'><![if !supportLists]><span lang=EN-US
-  style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-  Wingdings;font-weight:normal;mso-bidi-font-weight:bold'><span
-  style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
-  lang=EN-US>Articles</span></h2>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:8;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <h3 style='mso-list:l1 level1 lfo4'><![if !supportLists]><span lang=EN-US
-  style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-  Wingdings;font-weight:normal;mso-bidi-font-weight:bold'><span
-  style='mso-list:Ignore'>&Oslash;<span style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
-  lang=EN-US>Chinese</span></h3>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:9;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <p class=MsoNormal><span lang=EN-US><a href="dll.htm">Build and use DLL in
-  C++ on Windows</a></span><span lang=EN-US style='font-size:10.0pt;font-family:
-  "Calibri",sans-serif;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
-  "Times New Roman"'><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:10;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <p class=MsoNormal><span lang=EN-US><a href="metaheuristic.htm">A Glance At
-  Metaheuristic Algorithm</a></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:11;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <h3 style='mso-list:l1 level1 lfo4'><![if !supportLists]><span lang=EN-US
-  style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-  Wingdings;font-weight:normal;mso-bidi-font-weight:bold'><span
-  style='mso-list:Ignore'>&Oslash;<span style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
-  lang=EN-US>English</span></h3>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:12;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:13;mso-yfti-lastrow:yes;height:1.0cm'>
-  <td width=680 style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm'>
-  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=680 valign=top style='width:510.25pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:4.05pt;text-align:center;
+  text-indent:0cm'><b><span style='font-size:18.0pt;line-height:125%;
+  font-family:"微软雅黑",sans-serif'>如何在云雾缭绕的群山中找到制高点</span></b></p>
+  <h1><span lang=EN-US>1 </span><span style='font-family:"微软雅黑",sans-serif'>问题在哪？</span></h1>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>在一片云雾缭绕的群山中，能见度只有数米，只能够看清楚眼前的几步路，判断出往哪个方向走会让你的海拔升高或降低多少。在缺乏地理信息，只能亲自探索的情况下，你如何快速地“临绝顶，一览众山小”？具体来说：</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  lang=EN-US>1. </span><span style='font-family:宋体'>你的目标是找到尽可能高的山峰而不是最高的山峰，因为除非你把整个山区都走一遍，不然你永远无法确认你找到的是不是最高峰！</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  lang=EN-US>2. </span><span style='font-family:宋体'>你可以携带测绘和记录工具，以记录你探索过的区域的位置和海拔。</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  lang=EN-US>3. </span><span style='font-family:宋体'>你可以使用能增加你的移动速度的工具，但是别人也可以使用，所以要比别人快必须让你探索的路径更短！</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  lang=EN-US>4. </span><span style='font-family:宋体'>你可以找帮手或者携带其他工具，但是他们的数量都是有限的。</span></p>
+  <h1><span lang=EN-US>2 </span><span style='font-family:"微软雅黑",sans-serif'>意义何在？</span></h1>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>对于一个问题，我们往往可以将其总结为：</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>已知条件</span><span lang=EN-US> + </span><span
+  style='font-family:宋体'>约束条件</span><span lang=EN-US> + </span><span
+  style='font-family:宋体'>决策变量</span><span lang=EN-US> + </span><span
+  style='font-family:宋体'>目标函数。</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>决策变量往往也可以等同于整个问题的状态空间。如果有</span><span lang=EN-US>N</span><span
+  style='font-family:宋体'>个决策变量，或者说决策变量是一个</span><span lang=EN-US>N</span><span
+  style='font-family:宋体'>维向量，那么整个问题就有一个</span><span lang=EN-US>N</span><span
+  style='font-family:宋体'>维的状态空间。</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>以中心选址（如</span><span lang=EN-US>P-Center</span><span
+  style='font-family:宋体'>、</span><span lang=EN-US>P-Median</span><span
+  style='font-family:宋体'>）问题为例，</span> <span style='font-family:宋体'>我们需要在</span><span
+  lang=EN-US> c </span><span style='font-family:宋体'>个客户节点中选出</span><span
+  lang=EN-US> p </span><span style='font-family:宋体'>个作为服务节点，对他们自身和剩下的</span><span
+  lang=EN-US> ( c - p ) </span><span style='font-family:宋体'>个节点进行服务，每对节点之间的距离已知，要求服务边（如果节点</span><span
+  lang=EN-US> i </span><span style='font-family:宋体'>服务节点</span><span
+  lang=EN-US> j </span><span style='font-family:宋体'>即节点</span><span lang=EN-US>
+  i </span><span style='font-family:宋体'>和</span><span lang=EN-US> j </span><span
+  style='font-family:宋体'>之间有一条服务边）的长度之和最短。这个问题的典型应用案例是“物流公司如何确定集散中心建在哪个城市，使得总运输距离最短”。</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>下面我将简要介绍为什么这类问题和前面的爬山的问题是近似等效的。</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>首先我们假设只要选择一个节点</span><span lang=EN-US> x </span><span
+  style='font-family:宋体'>作为中心，以所有客户节点到该节点的距离之和</span><span lang=EN-US> f(x) </span><span
+  style='font-family:宋体'>为目标函数，那么我们的目标是找到一个使得目标函数值最小的</span><span lang=EN-US> x
+  </span><span style='font-family:宋体'>。原来的状态空间为</span><span lang=EN-US>1</span><span
+  style='font-family:宋体'>维，现在我们把每个状态的目标函数值加进去，便形成了一个二维空间，例如下面的平面直角坐标系：</span></p>
+  <p class=MsoNormal align=center style='margin-bottom:4.05pt;text-align:center;
+  text-indent:0cm'><span lang=EN-US><span style='mso-no-proof:yes'><img
+  width=314 height=297 id="_x0000_i1026" src="metaheuristic.files/image001.jpg"
+  alt=图片></span></span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>在</span><span lang=EN-US> f(x) </span><span
+  style='font-family:宋体'>的曲线上找一个最低点，该点的横坐标就是我们要找的</span><span lang=EN-US> x </span><span
+  style='font-family:宋体'>。</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>如果我们要选出两个中心，将它们用一个二维向量</span><span lang=EN-US> (x, y) </span><span
+  style='font-family:宋体'>表示，那么</span><span lang=EN-US> f(x, y) </span><span
+  style='font-family:宋体'>是一个三维空间中的曲面，我们要找曲面中的最低点：</span></p>
+  <p class=MsoNormal align=center style='margin-bottom:4.05pt;text-align:center;
+  text-indent:0cm'><span lang=EN-US><span style='mso-no-proof:yes'><img
+  width=545 height=438 id="_x0000_i1025" src="metaheuristic.files/image002.png"></span></span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>怎么样，这个是不是很像爬山了？只不过爬山的例子中是要找到最高峰，而这里是要找到最低谷（事实上只要把目标函数值全部乘以</span><span
+  lang=EN-US> -1 </span><span style='font-family:宋体'>就一样了）。</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>如果我们进一步增加中心的数量</span><span lang=EN-US>p</span><span
+  style='font-family:宋体'>，我们将在一片四维空间里的群山中寻找最低谷，这时可以用三维物体的密度来表示目标函数值。接下来，</span><span
+  lang=EN-US>5</span><span style='font-family:宋体'>维、</span><span lang=EN-US>6</span><span
+  style='font-family:宋体'>维……一直到</span><span lang=EN-US> (p+1) </span><span
+  style='font-family:宋体'>维。后面的情况我已经无法想象了，更无从用形象的图片来表示，不过相信大家看了二维和三维的情况应该已经心领神会了。</span></p>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>实际上，对于爬山的问题，就算你手中有地形图，也可以将问题转换为在一幅巨大的地形图上寻找海拔最高的点的问题，在地形复杂的山区，这也不是一件简单的事情！在高维空间中更是如此！</span>
+  </p>
+  <h1><span lang=EN-US>3 </span><span style='font-family:"微软雅黑",sans-serif'>解决方案？</span></h1>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>下面，我将介绍我对几个运筹学中最基本最简单最通俗易懂的方法的理解。这些方法都是来源于生活经验和大自然中的现象的启发式算法，更具体地来说主要是元启发式算法（</span><span
+  lang=EN-US>meta-heuristic</span><span style='font-family:宋体'>）。除此之外还有精确算法和近似算法，但那些算法也不是三言两语讲得清的。</span></p>
+  <h2><span lang=EN-US>3.1 </span><span style='font-family:宋体'>贪心构造</span></h2>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>求解一个问题一般有两种策略——构造和搜索。贪心构造的方法使用</span><span lang=EN-US>N</span><span
+  style='font-family:宋体'>次迭代逐个确定</span><span lang=EN-US>N</span><span
+  style='font-family:宋体'>个决策变量的值；而搜索则是一次性生成一个解，然后判断这个解是否符合要求，然后生成下一个解（往往是在之前的解的基础上进行小幅修改），然后重复。贪心构造的方法往往速度很快，但是几乎很显然无法找到复杂问题的最优解！</span></p>
+  <h2><span lang=EN-US>3.2 </span><span style='font-family:宋体'>局部搜索</span></h2>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>局部搜索是一种贪心的方法，它从一个随机的点出发（这个点可能是完全随机生成，也可能是由贪心构造生成），然后总是往眼前最好（环顾四周地势最高的方向）的地方走，往往可以迅速到达一个局部最优解，即一个山峰</span><span
+  lang=EN-US>/</span><span style='font-family:宋体'>山谷，然后就止步不前了，因为无论你再往哪个方向走都是下山</span><span
+  lang=EN-US>/</span><span style='font-family:宋体'>上山，都会使目标函数值比现在更差。为了改进局部搜索，我们需要找到一些方法来跳出局部最优，向全局最优不断前进！</span></p>
+  <h2><span lang=EN-US>3.3 </span><span style='font-family:宋体'>禁忌搜索</span><span
+  lang=EN-US>=</span><span style='font-family:宋体'>局部搜索</span><span lang=EN-US>+</span><span
+  style='font-family:宋体'>禁忌</span></h2>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>在纯粹局部搜索的情况下，到达局部最优解之后你也可以选择记录当前的决策变量的值，然后选择一个次优的方向（此时不动是最优）继续往前走，但是你下一步又会回到局部最优解。这时候，你需要使用禁忌——刚刚走过的地方我不会重新走一遍。于是你带上了一些标记，每走一步就做一个记号，以警示自己这里我已经探索过了。但是这样又有一个问题——你会需要背着大量的标记去爬山，这显然会把你给累死，而且，这样做还不如一个点一个点地穷举整个状态空间方便。所以，我们将只记录方向，不往刚走过的方向进行无用的探索（这里只是拿方向打个比方，实际上禁忌是很灵活的，比如中心选址问题中可以让“被选中为中心的节点被降级为客户节点之后不能再次被选中为中心节点”（强禁忌），或者“把中心节点</span><span
+  lang=EN-US>i</span><span style='font-family:宋体'>和客户节点</span><span lang=EN-US>j</span><span
+  style='font-family:宋体'>的角色互换过一次之后就不能再次执行同样的互换”（弱禁忌））。这样会遇到一个问题，就是一段时间之后所有方向都被禁忌了（有点像一条被自己的尾巴围住的贪食蛇</span><span
+  lang=EN-US>~</span><span style='font-family:宋体'>）！在高维空间中这个情况会更难发生，但是依然是存在的！于是，我们需要让禁忌有个步长限制，走了一定的步数之后，较早的禁忌要失效。这样我们就可以在群山之间四处探索而不会被困在某个山峰</span><span
+  lang=EN-US>/</span><span style='font-family:宋体'>山谷了！</span></p>
+  <h2><span lang=EN-US>3.4 </span><span style='font-family:宋体'>迭代局部搜索</span><span
+  lang=EN-US>=(</span><span style='font-family:宋体'>局部搜索</span><span lang=EN-US>|</span><span
+  style='font-family:宋体'>禁忌搜索</span><span lang=EN-US>)+</span><span
+  style='font-family:宋体'>扰动</span></h2>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>在禁忌搜索中，为了防止自己被困住，我们用禁忌步长削弱了禁忌的强度，这让我们容易在转了一大圈之后又回到原来的位置，而圈的大小取决于你的禁忌步长的长度。另外，再怎么禁忌，你也只能走一步远，在你发现周围一大片区域都没有很好的解的情况下，你要花很多时间才能离开这个缺乏山峰</span><span
+  lang=EN-US>/</span><span style='font-family:宋体'>山谷的“丘陵”或者“平原”。这时，你需要一个火箭背包，嗖的一声把你送上天，然后随机地落在某个位置，但是反正不要是刚才那个鬼地方！这个方法和随机重启搜索过程有点像，但是扰动是以当前位置为中心的，而随机重启则完全是碰运气。</span></p>
+  <h2><span lang=EN-US>3.5 </span><span style='font-family:宋体'>大邻域搜索</span></h2>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>禁忌搜索总是一步一步走出局部最优，速度往往较慢，而且如果禁忌强度不合理很容易在局部最优附近绕圈，或者走进四面八方都被禁忌的死胡同。可是扰动策略又太缺乏导向性，虽然出发点是好的，但是落地的位置运气成分还是太多。在这种情况下，我们可以放缓前进的步伐，每次出发之前都对周边更广阔的区域的地形进行细致的探索之后再决定前进的方向。但是因为视野的限制，我们仍然是鼠目寸光的，要想知道四周的具体情况，还得亲自走一遭。这样问题就来了，为了走一步，我们要花禁忌搜索走很多步的代价来进行探索。于是我们需要对探索的时间开销进行一定的权衡，合理控制探索区域的面积，或者只挑选一些比较有潜力的方向进行深入探索。</span></p>
+  <h2><span lang=EN-US>3.6 </span><span style='font-family:宋体'>基于种群的进化算法</span><span
+  lang=EN-US>/</span><span style='font-family:宋体'>遗传算法</span></h2>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>这是一种从大自然中总结出来的方法，与生物进化的过程很像——我们总是维护着一定数量的解而不是像前面的方法一样只对单一解做修改。这种方法具有很好的包容性——它允许看上去不够优秀的解的存在！该方法在产生了初始种群之后，就开始了一个经典的迭代——选择</span><span
+  lang=EN-US>-</span><span style='font-family:宋体'>交配</span><span lang=EN-US>-</span><span
+  style='font-family:宋体'>变异</span><span lang=EN-US>-</span><span
+  style='font-family:宋体'>适应。每次迭代中，较差的个体将有很大的几率被淘汰；而优秀的个体之间会有很大的几率将它们的优秀基因组合起来产生新的后代；为了防止整个种群的基因趋于单一化，算法使用变异（类似于前面提到的扰动，但是一般没有那么剧烈）增加种群的基因多样性；最后，变异的过程可能会产生一些不满足约束的解（与目标函数值较差不同），这时候需要一些修复策略来保护这个一旦生存下来就可能会很优秀的个体，或者说让这个个体重新适应当前的环境（状态空间）。（关于适应的重要性在这里我可以举个不恰当的例子：霍金拥有一个充满智慧的头脑，但是患有肌肉萎缩性侧索硬化症的他几乎无法独立生存，于是他的妻子会悉心照顾他，还有人送他高科技轮椅）对应到我们爬山的例子，就是让多个人和你一起找，如果有一部分人找到了比较好的结果，就把结果较差的那些人空投到那些有较好结果的人的附近开始探索，另外如果降落的时候一不小心挂到树上了得想办法回到地面上……</span></p>
+  <h2><span lang=EN-US>3.7 </span><span style='font-family:宋体'>其他从大自然的哲学中总结出来的方法</span></h2>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>严格地说这些方法可以归类于前面的方法，比如（</span><span lang=EN-US>1</span><span
+  style='font-family:宋体'>）模拟退火——这是一种金属冶炼过程中让提升金属硬度的方法（与淬火提升韧性相反）。与进化算法类似，这种方法也是一个允许选择看上去相对较差的解的包容性方法，它通过</span>
+  <span style='font-family:宋体'>温度</span> <span style='font-family:宋体'>和</span> <span
+  style='font-family:宋体'>新产生的解与局部最优解的目标函数的差值</span> <span style='font-family:
+  宋体'>来得到一个概率，由这个概率来决定是否将原来的解换成新产生的解。随着温度的下降，包容性和随机性不断减小——随着金属原子纷纷落到了势能最小的位置（找到归宿），到处乱跑寻找新的归宿的自由将逐渐被禁止。简而言之，模拟退火是一种允许相对较差解的局部搜索算法。（</span><span
+  lang=EN-US>2</span><span style='font-family:宋体'>）蚁群算法——这个方法和进化算法类似也是一个基于种群的算法，但是它也很像基于概率的模拟退火算法。它模拟了蚁群在确定巢穴和食物之间的最短路径的方法——根据之前的蚂蚁留下的信息素的浓度不同，跟在后面的蚂蚁有不同的概率选择到底是走哪一条路径，或者自己探索一条新的路径，显然信息素浓度高的路径有更大的概率成为后面的蚂蚁的选择。由于较短的路径上往返较快，该路径上的浓度会相对高一点，然后就会有更多的蚂蚁选择这条路径，最后，最佳的路径信息素浓度远远超过其他路径，于是蚁群中的绝大多数蚂蚁都会通过这条最短的路径搬运食物。蚁群算法几乎与进化算法一样，但是可以认为它进行的是无性繁殖，即没有将优秀基因结合在一起的交配过程，而其他方面几乎和进化算法一样。</span></p>
+  <h2><span lang=EN-US>3.8 </span><span style='font-family:宋体'>混合搜索</span><span
+  lang=EN-US>=</span><span style='font-family:宋体'>之前的所有方法的各种组合拼凑</span></h2>
+  <p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+  style='font-family:宋体'>计算机学科螺旋上升的发展过程中，有一根很重要的主轴——平衡。每个方法都有自己的优势和缺陷，对有些情况能快速处理而对有些情况又无能为力。这时候，中庸之道便是普适的解决方案！</span></p>
+  <p class=MsoNormal align=center style='margin-bottom:4.05pt;text-align:center;
+  text-indent:0cm'><b><span lang=EN-US style='font-size:18.0pt;line-height:
+  125%;font-family:"微软雅黑",sans-serif'>&nbsp;</span></b></p>
   </td>
  </tr>
 </table>
 
 </div>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span><span lang=EN-US
-style='mso-fareast-font-family:宋体'><o:p></o:p></span></p>
+<p class=MsoNormal style='margin-bottom:4.05pt;text-indent:24.0pt'><span
+lang=EN-US>&nbsp;</span></p>
 
 </div>
 
