@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Packing Equal Circles in a Circle</title>
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <style>
+    body {
+      /* width: 100%;
+      height: 100%;
+      overflow: auto; */
+      margin: 0;
+    }
+
+    circle {
+      stroke: black;
+      fill: transparent;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #g path {
+      stroke: #ccc;
+      fill: transparent;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #f path {
+      stroke: #07f;
+      fill: transparent;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #r, #help, #hdbg, #mdbg {
+      position: fixed;
+      font-size: 1vh;
+      border-style: none;
+    }
+    #r {
+      top: 1vh;
+      left: 1vh;
+    }
+    #help {
+      top: 50vh;
+      right: 1vh;
+    }
+    #hdbg {
+      top: 1vh;
+      right: 1vh;
+    }
+    #mdbg {
+      bottom: 1vh;
+      right: 1vh;
+    }
+  </style>
+
+  <script src="jsutilib.js"></script>
+  <script src="renderer.js"></script>
+</head>
+
+<body>
+  <table id='r'>
+    <tr><td>r*</td><td id='ro'></td></tr>
+    <tr><td>rr</td><td id='rr'></td></tr>
+    <tr><td>r</td><td id='rc'></td></tr>
+    <tr><td>n</td><td id='n'></td></tr>
+  </table>
+  <div id='help'><ul>
+    <li>鼠标左键单击小圆可令小圆随鼠标移动</li>
+    <li>再次单击鼠标左键将小圆放下</li>
+    <li>鼠标中键单击空白可添加小圆</li>
+    <li>鼠标中键单击小圆可删除该小圆</li>
+  </ul>
+  </div>
+  <table id='hdbg'></table>
+  <div id='mdbg'></div>
+
+  <svg id='v' version='1.1' width='960' height='960' viewBox='-1.125 -1.125 2.25 2.25'
+    xmlns='http://www.w3.org/2000/svg'>
+    <g id='g'>
+    </g>
+
+    <g id='f'>
+    </g>
+
+    <circle cx='0' cy='0' r='1' />
+
+    <g id='c'>
+    </g>
+  </svg>
+</body>
+
+</html>

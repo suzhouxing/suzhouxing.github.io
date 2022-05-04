@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>时刻表</title>
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="jquery-ui.min.css" />
+  <link rel="stylesheet" href="theme.dark.css" id="theme-css" />
+</head>
+
+<body>
+  <div id="page-title">
+    <img id="logo" src="logo_black.png">
+
+    <div id="command-panel">
+      <button id="help-info">帮助与支持</button>
+      <button id="toggle-theme">切换主题</button>
+      <button id="toggle-dependency">切换依赖关系显示</button>
+      <!-- <button id="solve-assignment">智能分配机位</button> -->
+      <!-- <button id="rand-assignment">随机分配机位</button> -->
+      <!-- <button id="push-assignment">发布分配方案</button> -->
+    </div>
+  </div>
+
+  <section>
+    <div id="container">
+      <div id="schedule-chart">
+        <div id="time-axis-top" class="time-axis"></div>
+        <div id="chart-background"></div>
+        <div id="time-axis-bottom" class="time-axis"></div>
+        <div id="jobs-view"></div>
+
+        <div id="time-shadow"></div>
+        <div id="time-line"><div></div></div>
+      </div>
+      <table id="worker-axis"></table>
+    </div>
+  </section>
+
+  <!-- 
+    jquery integration to electron: https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined
+    
+    1. fake browser environment
+      <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+      <script src="jquery.min.js"></script>
+      <script>if (window.module) { module = window.module; }</script>
+    2. load jquery in node's fashion and re
+      <script>window.$ = window.jQuery = require('jquery.min.js');</script>
+    3. disable node in index.js in electron project
+      let win = new BrowserWindow({ webPreferences: { nodeIntegration: false } });
+  -->
+  <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <script src="jquery.min.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script>if (window.module) { module = window.module; }</script>
+  <script src="jsutilib.js"></script>
+
+  <script src="data/test.js"></script>
+
+  <script src="checker.js"></script>
+  <script src="renderer.js"></script>
+</body>
+
+</html>

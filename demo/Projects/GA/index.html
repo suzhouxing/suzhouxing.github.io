@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>停机位分配</title>
+
+  <link rel="stylesheet" href="jquery-ui.min.css" />
+  <link rel="stylesheet" href="theme.dark.css" id="theme-css" />
+</head>
+
+<body>
+  <div id="page-title">
+    <img id="logo" src="logo_black.png">
+
+    <div id="command-panel">
+      <button id="help-info">帮助与支持</button>
+      <button id="toggle-theme">切换主题</button>
+      <button id="toggle-refresh">暂停刷新</button>
+      <button id="solve-assignment">智能分配机位</button>
+      <button id="rand-assignment">随机分配机位</button>
+      <button id="push-assignment">发布分配方案</button>
+    </div>
+  </div>
+
+  <section>
+    <div id="brief-info">
+      <table id="input-info">
+        <tr>
+          <td><span class="info-tag horizon-tag">开始</span></td>
+          <td><div class="info-key">规划周期开始</div></td>
+          <td><span class="info-value" id="horizon-begin"></span><input type="text" placeholder="2018-12-03 06:00" id="custom-horizon-begin"></td>
+        </tr>
+        <tr>
+          <td><span class="info-tag horizon-tag">结束</span></td>
+          <td><div class="info-key">规划周期结束</div></td>
+          <td><span class="info-value" id="horizon-end"></span><input type="text" placeholder="2018-12-03 10:00" id="custom-horizon-end"></td>
+        </tr>
+        <tr>
+          <td><span class="info-tag gate-tag">机位</span></td>
+          <td><div class="info-key">总停机位数</div></td>
+          <td><div class="info-value" id="gate-num"></div></td>
+        </tr>
+        <tr>
+          <td><span class="info-tag flight-tag">过站</span></td>
+          <td><div class="info-key">过站飞机数</div></td>
+          <td><div class="info-value" id="flight-num"></div></td>
+        </tr>
+        <tr>
+          <td><span class="info-tag vital-tag">重要</span></td>
+          <td><div class="info-key">重要航班数</div></td>
+          <td><div class="info-value" id="vital-num">0</div></td>
+        </tr>
+      </table>
+      <table id="output-info">
+        <tr>
+          <td><span class="info-tag international-tag">国际</span></td>
+          <td><div class="info-key">国际航班数</div></td>
+          <td><div class="info-value" id="international-num">0</div></td>
+        </tr>
+        <tr>
+          <td><span class="info-tag stayover-tag">航后</span></td>
+          <td><div class="info-key">航后航班数</div></td>
+          <td><div class="info-value" id="stayover-num">0</div></td>
+        </tr>
+        <tr>
+          <td><span class="info-tag taxiway-tag">冲突</span></td>
+          <td><div class="info-key">滑行道口冲突</div></td>
+          <td><div class="info-value" id="taxiway-conflict">0</div></td>
+        </tr>
+        <tr>
+          <td><span class="info-tag bridge-tag">靠桥</span></td>
+          <td><div class="info-key">靠桥航班数</div></td>
+          <td><div class="info-value" id="bridge-util">0</div></td>
+        </tr>
+        <tr>
+          <td><span class="info-tag preference-tag">偏好</span></td>
+          <td><div class="info-key">停机位偏好</div></td>
+          <td><div class="info-value" id="gate-preference">0</div></td>
+        </tr>
+      </table>
+      <div style="clear: both;"></div>
+    </div>
+
+    <div id="container">
+      <div id="schedule-chart">
+        <div id="time-axis-top" class="time-axis"></div>
+        <div id="chart-background"></div>
+        <div id="time-axis-bottom" class="time-axis"></div>
+        <div id="flights-view"></div>
+
+        <div id="time-shadow"></div>
+        <div id="time-line"><div></div></div>
+      </div>
+      <table id="gate-axis"></table>
+    </div>
+  </section>
+
+  <!-- 
+    jquery integration to electron: https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined
+    
+    1. fake browser environment
+      <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+      <script src="jquery.min.js"></script>
+      <script>if (window.module) { module = window.module; }</script>
+    2. load jquery in node's fashion and re
+      <script>window.$ = window.jQuery = require('jquery.min.js');</script>
+    3. disable node in index.js in electron project
+      let win = new BrowserWindow({ webPreferences: { nodeIntegration: false } });
+  -->
+  <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <script src="jquery.min.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script>if (window.module) { module = window.module; }</script>
+  <script src="jsutilib.js"></script>
+
+  <!-- TODO[0]: remove this testing code!!! -->
+  <script src="testcmd.js"></script>
+
+  <script src="checker.js"></script>
+  <script src="renderer.js"></script>
+</body>
+
+</html>
